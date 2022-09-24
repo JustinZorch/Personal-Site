@@ -8,7 +8,7 @@ export const backendCourses = [
   {
     id: 2,
     title: "Data Structures & Algorithms",
-    img: "assets/Courses/interview.jpg",
+    img: "assets/Courses/Interview.jpg",
     url: "https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/",
   },
   {
@@ -69,7 +69,7 @@ export const projects = [
     name: "WordMaster",
     live: "https://wordmaster2022.herokuapp.com/",
     github: "https://github.com/JustinZorch/WordMaster",
-    source: "assets/projects/wordmaster.jpg",
+    source: "assets/projects/wordmaster.JPG",
     gif: "assets/Project Gifs/wordmaster.gif",
     description:
       "A redesign of the popular Wordle game with some added features.",
@@ -94,7 +94,7 @@ export const projects = [
     name: "JLVL",
     live: "",
     github: "",
-    source: "assets/projects/jlvl.jpg",
+    source: "assets/projects/jlvl.JPG",
     gif: "",
     description: "Personal Software Engineering website.",
     features: [
@@ -116,7 +116,7 @@ export const projects = [
     name: "Justins Pizzeria",
     live: "https://justins-pizzeria-nl.vercel.app/",
     github: "https://github.com/JustinZorch/Justins-Pizzeria",
-    source: "assets/projects/pizzeria.jpg",
+    source: "assets/projects/pizzeria.JPG",
     gif: "assets/Project Gifs/pizzeria.gif",
     description:
       "Pizzeria order management site with admin and client capabilities.",
@@ -142,7 +142,7 @@ export const projects = [
     name: "Unsplash Search API",
     live: "https://unsplash-api-sigma.vercel.app/",
     github: "https://github.com/JustinZorch/Unsplash-API",
-    source: "assets/projects/unsplash.jpg",
+    source: "assets/projects/unsplash.JPG",
     gif: "assets/Project Gifs/unsplash.gif",
     description: "An image search site using the Unsplash API",
 
@@ -163,7 +163,7 @@ export const projects = [
     name: "Great Quotes",
     live: "https://react-http-f7d52.web.app/quotes",
     github: "https://github.com/JustinZorch/Great-Quotes",
-    source: "assets/projects/quote.jpg",
+    source: "assets/projects/quote.JPG",
     gif: "assets/Project Gifs/quotes.gif",
     description: "Blog style quote app with comments",
 
