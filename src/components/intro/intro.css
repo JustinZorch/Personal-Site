@@ -1,0 +1,275 @@
+.intro {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.intro .left {
+  -webkit-box-flex: 0.65;
+      -ms-flex: 0.65;
+          flex: 0.65;
+  overflow: hidden;
+}
+
+.intro .left .main {
+  width: 100%;
+  margin-left: 180px;
+  margin-top: 120px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 650px;
+  height: 650px;
+  overflow: visible;
+}
+
+.intro .left .circle {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+@media (max-width: 768px) {
+  .intro .left .circle {
+    display: none;
+  }
+}
+
+.intro .left .circle:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.intro .left .circle:hover .features a {
+  display: block;
+  color: #0067e2;
+}
+
+.intro .left .circle:hover .features .icon {
+  color: #0067e2;
+}
+
+.intro .left .circle .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.intro .left .circle .features a {
+  text-decoration: none;
+  display: none;
+  padding: 3px 0;
+}
+
+.intro .left .circle .features .icon {
+  color: black;
+  font-size: 50px;
+}
+
+.intro .left .circle .features .school {
+  font-size: 55px;
+}
+
+.intro .left .circle:nth-child(1) {
+  left: 85px;
+  top: -102px;
+}
+
+.intro .left .circle:nth-child(2) {
+  left: 420px;
+  top: -102px;
+}
+
+.intro .left .circle:nth-child(3) {
+  left: -128px;
+  top: 160px;
+}
+
+.intro .left .circle:nth-child(4) {
+  left: 635px;
+  top: 160px;
+}
+
+.intro .left .imgContainer {
+  position: relative;
+  width: 650px;
+  height: 650px;
+  background-color: #0067e2;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: right;
+}
+
+@media (max-width: 768px) {
+  .intro .left .imgContainer {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    left: -95px;
+  }
+}
+
+.intro .left .imgContainer img {
+  height: 90%;
+  margin-top: 65px;
+  margin-left: 35px;
+}
+
+@media (max-width: 768px) {
+  .intro .left .imgContainer img {
+    height: 50%;
+  }
+}
+
+.intro .right {
+  -webkit-box-flex: 0.35;
+      -ms-flex: 0.35;
+          flex: 0.35;
+  overflow: hidden;
+}
+
+.intro .right .wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .intro .right .wrapper {
+    padding-left: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.intro .right .wrapper h1 {
+  font-size: 60px;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .intro .right .wrapper h1 {
+    font-size: 40px;
+  }
+}
+
+.intro .right .wrapper h2 {
+  font-size: 35px;
+}
+
+.intro .right .wrapper h3 {
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .intro .right .wrapper h3 {
+    font-size: 20px;
+  }
+}
+
+.intro .right .wrapper h3 span {
+  font-size: inherit;
+  color: #0067e2;
+}
+
+.intro .right .wrapper h3 .ityped-cursor {
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.intro .right a {
+  position: absolute;
+  bottom: 10px;
+  left: 65%;
+}
+
+.intro .right a .arrowDownward {
+  color: black;
+  font-size: 100px;
+  -webkit-animation: arrowBlink 3s infinite;
+          animation: arrowBlink 3s infinite;
+}
+
+@-webkit-keyframes arrowBlink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes arrowBlink {
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=intro.css.map */

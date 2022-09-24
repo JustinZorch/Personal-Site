@@ -1,0 +1,207 @@
+.topbar {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  color: #0067e2;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  overflow: visible;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.topbar .wrapper {
+  padding: 10px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.topbar .wrapper .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.topbar .wrapper .left .jlvl {
+  font-size: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  margin-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  cursor: pointer;
+}
+
+.topbar .wrapper .left .jlvl .justin,
+.topbar .wrapper .left .jlvl .lance,
+.topbar .wrapper .left .jlvl .victor,
+.topbar .wrapper .left .jlvl .louckx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 15px;
+}
+
+.topbar .wrapper .left .jlvl .justin:hover .ustin,
+.topbar .wrapper .left .jlvl .justin:hover .ance,
+.topbar .wrapper .left .jlvl .justin:hover .ictor,
+.topbar .wrapper .left .jlvl .justin:hover .ouckx,
+.topbar .wrapper .left .jlvl .lance:hover .ustin,
+.topbar .wrapper .left .jlvl .lance:hover .ance,
+.topbar .wrapper .left .jlvl .lance:hover .ictor,
+.topbar .wrapper .left .jlvl .lance:hover .ouckx,
+.topbar .wrapper .left .jlvl .victor:hover .ustin,
+.topbar .wrapper .left .jlvl .victor:hover .ance,
+.topbar .wrapper .left .jlvl .victor:hover .ictor,
+.topbar .wrapper .left .jlvl .victor:hover .ouckx,
+.topbar .wrapper .left .jlvl .louckx:hover .ustin,
+.topbar .wrapper .left .jlvl .louckx:hover .ance,
+.topbar .wrapper .left .jlvl .louckx:hover .ictor,
+.topbar .wrapper .left .jlvl .louckx:hover .ouckx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.topbar .wrapper .left .jlvl .justin .ustin,
+.topbar .wrapper .left .jlvl .justin .ance,
+.topbar .wrapper .left .jlvl .justin .ictor,
+.topbar .wrapper .left .jlvl .justin .ouckx,
+.topbar .wrapper .left .jlvl .lance .ustin,
+.topbar .wrapper .left .jlvl .lance .ance,
+.topbar .wrapper .left .jlvl .lance .ictor,
+.topbar .wrapper .left .jlvl .lance .ouckx,
+.topbar .wrapper .left .jlvl .victor .ustin,
+.topbar .wrapper .left .jlvl .victor .ance,
+.topbar .wrapper .left .jlvl .victor .ictor,
+.topbar .wrapper .left .jlvl .victor .ouckx,
+.topbar .wrapper .left .jlvl .louckx .ustin,
+.topbar .wrapper .left .jlvl .louckx .ance,
+.topbar .wrapper .left .jlvl .louckx .ictor,
+.topbar .wrapper .left .jlvl .louckx .ouckx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  font-size: 25px;
+}
+
+.topbar .wrapper .left .itemContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .topbar .wrapper .left .itemContainer {
+    display: none;
+  }
+}
+
+.topbar .wrapper .left .itemContainer .icon {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.topbar .wrapper .left .itemContainer span {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.topbar .wrapper .right {
+  margin-top: 10px;
+}
+
+.topbar .wrapper .right .hamburger {
+  width: 32px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.topbar .wrapper .right .hamburger span {
+  width: 99%;
+  height: 3px;
+  background-color: #0067e2;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.topbar.active {
+  background-color: #0067e2;
+  color: white;
+}
+
+.topbar.active .ustin,
+.topbar.active .ance,
+.topbar.active .ictor,
+.topbar.active .ouckx {
+  opacity: 0;
+}
+
+.topbar.active .hamburger span:first-child {
+  background-color: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.topbar.active .hamburger span:nth-child(2) {
+  background-color: white;
+  opacity: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.topbar.active .hamburger span:last-child {
+  background-color: white;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/*# sourceMappingURL=topbar.css.map */

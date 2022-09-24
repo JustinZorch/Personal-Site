@@ -1,0 +1,193 @@
+@import "../../global.scss";
+
+.contact {
+  background-color: white;
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    @include mobile {
+      flex: 0.3;
+      position: static;
+    }
+
+    .message {
+      transform: rotate(3deg);
+      font-family: "Schoolbell", cursive;
+      font-size: 20px;
+      margin-top: 450px;
+      position: absolute;
+      width: 300px;
+      height: 250px;
+
+      @include mobile {
+        background-color: #0066e217;
+        width: 75%;
+        height: 55%;
+        padding: 20px;
+        border-radius: 20px;
+        transform: rotate(0deg);
+        margin-top: 20px;
+        position: static;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+          rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+          rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+      }
+    }
+
+    img {
+      height: 75%;
+      position: absolute;
+      cursor: pointer;
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    .thanks {
+      padding: 20px;
+      width: 400px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #0066e217;
+      box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+        rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+        rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+      @include mobile {
+        width: 80vw;
+        text-align: center;
+      }
+
+      .icon {
+        padding-bottom: 20px;
+        font-size: 50px;
+        &:hover {
+          animation: shake 0.5s;
+          animation-iteration-count: infinite;
+        }
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translate(1px, 1px) rotate(0deg);
+        }
+        10% {
+          transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        20% {
+          transform: translate(-3px, 0px) rotate(1deg);
+        }
+        30% {
+          transform: translate(3px, 2px) rotate(0deg);
+        }
+        40% {
+          transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+          transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+          transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+          transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+          transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
+      }
+
+      span {
+        font-size: 30px;
+      }
+    }
+
+    form {
+      width: 70%;
+      height: 70%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      input {
+        width: 300px;
+        height: 30px;
+        font-size: 14px;
+        padding: 0 10px;
+        @include mobile {
+          width: 90%;
+        }
+      }
+
+      textarea {
+        width: 300px;
+        height: 200px;
+        font-size: 14px;
+        padding: 0 10px;
+
+        @include mobile {
+          width: 90%;
+        }
+      }
+
+      button {
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color: crimson;
+        border: none;
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      span {
+        color: green;
+      }
+    }
+  }
+}

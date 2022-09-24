@@ -1,0 +1,231 @@
+@import "../../global.scss";
+
+.intro {
+  background-color: white;
+  display: flex;
+  transition: all 1s ease;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    flex: 0.65; //splits the page 50-50
+    overflow: hidden;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main {
+      width: 100%;
+      margin-left: 180px;
+      margin-top: 120px;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      width: 650px;
+      height: 650px;
+      overflow: visible;
+
+      @include mobile {
+        height: 100%;
+        margin-top: 0;
+        margin-left: 11.5%;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .circle {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    transform-origin: center;
+    transition: all 2s ease;
+
+    @include mobile {
+      display: none;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+
+      .features {
+        span {
+          display: block;
+          color: $maincolor;
+        }
+        .icon {
+          color: $maincolor;
+        }
+      }
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      span {
+        text-decoration: none;
+        display: none;
+        padding: 3px 0;
+      }
+
+      .icon {
+        color: black;
+        font-size: 50px;
+      }
+      .school {
+        font-size: 55px;
+      }
+    }
+  }
+
+  .circle:nth-child(1) {
+    left: 85px;
+    top: -102px;
+  }
+
+  .circle:nth-child(2) {
+    left: 420px;
+    top: -102px;
+  }
+
+  .circle:nth-child(3) {
+    left: -128px;
+    top: 160px;
+  }
+
+  .circle:nth-child(4) {
+    left: 635px;
+    top: 160px;
+  }
+
+  .imgContainer {
+    position: relative;
+    width: 650px;
+    height: 650px;
+    background-color: $maincolor;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+
+    @include mobile {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+    }
+
+    img {
+      height: 90%;
+      margin-top: 65px;
+      margin-left: 35px;
+
+      @include mobile {
+        height: 100%;
+        margin-bottom: 1px;
+      }
+    }
+  }
+
+  .right {
+    flex: 0.35;
+    overflow: hidden;
+    @include mobile {
+      margin-bottom: 50px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+
+      @include mobile {
+        padding-left: 0;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 60px;
+        margin: 10px 0;
+
+        @include mobile {
+          font-size: 40px;
+        }
+      }
+      h2 {
+        font-size: 35px;
+      }
+      h3 {
+        font-size: 30px;
+
+        @include mobile {
+          font-size: 20px;
+        }
+
+        span {
+          font-size: inherit;
+          color: $maincolor;
+        }
+
+        .ityped-cursor {
+          animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 65%;
+
+      @include mobile {
+        left: 38%;
+      }
+
+      .arrowDownward {
+        color: black;
+        font-size: 100px;
+        animation: arrowBlink 3s infinite;
+
+        @include mobile {
+          font-size: 80px;
+        }
+      }
+
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

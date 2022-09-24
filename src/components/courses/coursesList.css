@@ -1,0 +1,19 @@
+.coursesList {
+  font-size: 14px;
+  margin-right: 50px;
+  padding: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .coursesList {
+    margin-right: 20px;
+  }
+}
+
+.coursesList.active {
+  background-color: #0067e2;
+  color: white;
+}
+/*# sourceMappingURL=coursesList.css.map */

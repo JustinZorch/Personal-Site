@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,YAAY,CAAC;EACX,SAAS,EAAE,IAAI;EACf,YAAY,EAAE,IAAI;EAClB,OAAO,EAAE,GAAG;EACZ,aAAa,EAAE,IAAI;EACnB,MAAM,EAAE,OAAO;CAUhB;;ACTC,MAAM,EAAE,SAAS,EAAE,KAAK;EDN1B,AAAA,YAAY,CAAC;IAQT,YAAY,EAAE,IAAI;GAOrB;;;AAfD,AAWE,YAXU,AAWT,OAAO,CAAC;EACP,gBAAgB,ECXR,OAAO;EDYf,KAAK,EAAE,KAAK;CACb",
+    "sources": [
+        "coursesList.scss",
+        "../../global.scss"
+    ],
+    "names": [],
+    "file": "coursesList.css"
+}

@@ -1,0 +1,115 @@
+.courses {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.courses h1 {
+  font-size: 50px;
+}
+
+@media (max-width: 768px) {
+  .courses h1 {
+    font-size: 20px;
+  }
+}
+
+.courses ul {
+  margin: 10px;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .courses ul {
+    margin: 10px 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.courses .container {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .courses .container {
+    width: 100%;
+  }
+}
+
+.courses .container .item {
+  width: 240px;
+  height: 150px;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  margin: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  position: relative;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .courses .container .item {
+    width: 130px;
+    height: 100px;
+  }
+}
+
+.courses .container .item h3 {
+  position: absolute;
+  font-size: 20px;
+}
+
+.courses .container .item img {
+  width: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.courses .container .item:hover {
+  background-color: #0067e2;
+}
+
+.courses .container .item:hover img {
+  opacity: 0.2;
+  z-index: 0;
+}
+/*# sourceMappingURL=courses.css.map */
