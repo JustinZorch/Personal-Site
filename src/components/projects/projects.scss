@@ -39,14 +39,17 @@
 
         .githubM {
           margin-left: -30px;
+          overflow: hidden;
         }
 
         .liveM {
           margin-left: 60px;
+          overflow: hidden;
         }
 
         .gifM {
           margin-left: -30px;
+          overflow: hidden;
         }
 
         .icon {
@@ -58,6 +61,7 @@
       .rightM {
         overflow: hidden;
         margin: 5px 0;
+        border-radius: 5px;
 
         .mainImageM {
           height: 9vh;
@@ -74,17 +78,61 @@
     }
   }
 
+  .gifContainerM {
+    width: 95%;
+    padding: 20px 5px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .gifImageM {
+      width: 100%;
+      margin: 20px 0;
+      box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+        rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+        rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+    .detailsM {
+      padding: 10px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .featuresContainerM {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+
+      li {
+        margin-top: 10px;
+        overflow: visible;
+
+        list-style-type: circle;
+      }
+    }
+
+    .iconM {
+      margin: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: white;
+      background-color: black;
+    }
+  }
+
   h1 {
     margin-top: -80vh;
     font-size: 40px;
     color: white;
     position: absolute;
-
-    @include mobile {
-      margin-top: -90vh;
-      color: black;
-      font-size: 20px;
-    }
   }
 
   .arrow {

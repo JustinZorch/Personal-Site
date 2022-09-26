@@ -14,6 +14,12 @@ import { useMediaQuery } from "react-responsive";
 export default function Projects() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [gif, setGif] = useState(false);
+  const [gifSourceM, setGifSourceM] = useState({
+    gif: "",
+    name: "",
+    description: "",
+    features: [],
+  });
   const data = projects;
 
   const Mobile = ({ children }) => {
@@ -37,28 +43,62 @@ export default function Projects() {
   return (
     <div className="projectsContainer" id="projects">
       <Mobile>
-        <h1 style={{ color: "white" }}>Projects</h1>
-        <div className="projectsM">
-          {data.map((item) => (
-            <div className="containerM">
-              <div className="leftM">
-                <a href={item.github} target="_blank" className="githubM">
-                  <GitHub className="icon" />
-                </a>
-                <a href={item.live} target="_blank" className="liveM">
-                  <Laptop className="icon" />
-                </a>
-                <div className="gifM" onClick={() => setGif(true)}>
-                  <GifBox className="icon" />
+        {!gif ? (
+          <>
+            <h1 style={{ color: "white" }}>Projects</h1>
+            <div className="projectsM">
+              {data.map((item) => (
+                <div className="containerM">
+                  <div className="leftM">
+                    <a href={item.github} target="_blank" className="githubM">
+                      <GitHub className="icon" />
+                    </a>
+                    <a href={item.live} target="_blank" className="liveM">
+                      <Laptop className="icon" />
+                    </a>
+                    <div
+                      className="gifM"
+                      onClick={() => {
+                        setGifSourceM({
+                          gif: item.gif,
+                          name: item.name,
+                          description: item.description,
+                          features: item.features,
+                        });
+                        setGif(true);
+                      }}
+                    >
+                      <GifBox className="icon" />
+                    </div>
+                  </div>
+                  <div className="rightM">
+                    <img className="mainImageM" src={item.source} alt="" />
+                    <h2>{item.name}</h2>
+                  </div>
                 </div>
-              </div>
-              <div className="rightM">
-                <img className="mainImageM" src={item.source} alt="" />
-                <h2>{item.name}</h2>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        ) : (
+          <>
+            <div className="gifContainerM" onClick={() => setGif(false)}>
+              <h2>{gifSourceM.name} Site Demo</h2>
+              <img src={gifSourceM.gif} className="gifImageM" alt="" />
+              <div className="detailsM">
+                <p>{gifSourceM.description}</p>
+              </div>
+              <div className="featuresContainerM">
+                <span>Features:</span>
+                <ul className="featuresM">
+                  {gifSourceM.features.map((feature) => (
+                    <li>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+              <Close className="iconM" />
+            </div>
+          </>
+        )}
       </Mobile>
       <Desktop>
         <h1>Projects</h1>
