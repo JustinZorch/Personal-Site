@@ -13,6 +13,64 @@
   .left {
     flex: 0.65; //splits the page 50-50
     overflow: hidden;
+
+    @include mobile {
+      flex: 0.75;
+    }
+
+    .topM {
+      display: flex;
+
+      flex-direction: column;
+      align-items: center;
+
+      .imgContainerM {
+        background-color: $maincolor;
+        width: 40vh;
+        height: 40vh;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 10px 20px auto;
+      }
+
+      img {
+        height: 40vh;
+        margin-top: 2px;
+        margin-left: 40px;
+        overflow: hidden;
+      }
+
+      .linksM {
+        margin-top: 20px;
+        height: 20vh;
+      }
+
+      .topLinkM,
+      .bottomLinkM {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        margin-top: 10px;
+
+        .iconM {
+          display: flex;
+          width: 100px;
+          flex-direction: column;
+          align-items: center;
+          color: black;
+          overflow: hidden;
+
+          padding: 10px 30px;
+          span {
+            font-size: 20px;
+          }
+
+          .iconsM {
+            font-size: 30px;
+          }
+        }
+      }
+    }
     @include mobile {
       display: flex;
       flex-direction: column;
@@ -31,9 +89,7 @@
       overflow: visible;
 
       @include mobile {
-        height: 100%;
-        margin-top: 0;
-        margin-left: 11.5%;
+        display: none;
       }
     }
   }
@@ -144,6 +200,8 @@
     flex: 0.35;
     overflow: hidden;
     @include mobile {
+      flex: 0.25;
+      width: 100vw;
       margin-bottom: 50px;
       align-items: center;
       display: flex;
@@ -160,7 +218,6 @@
       position: relative;
 
       @include mobile {
-        padding-left: 0;
         align-items: center;
       }
 

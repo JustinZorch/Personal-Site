@@ -51,7 +51,7 @@
     img {
       height: 75%;
       position: absolute;
-      cursor: pointer;
+
       @include mobile {
         display: none;
       }

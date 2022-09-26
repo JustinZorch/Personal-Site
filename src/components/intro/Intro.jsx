@@ -9,11 +9,16 @@ import {
 
 import { init } from "ityped";
 import { useEffect, useRef, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 export default function Intro() {
   const textRef = useRef();
-
   const [mainImage, setMainImage] = useState("assets/Justin Pngs/Front.png");
+
+  const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 767 });
+    return isMobile ? children : null;
+  };
 
   useEffect(() => {
     init(textRef.current, {
@@ -27,6 +32,40 @@ export default function Intro() {
   return (
     <div className="intro" id="intro">
       <div className="left">
+        <Mobile>
+          <div className="topM">
+            <div className="imgContainerM">
+              <img
+                src={mainImage}
+                alt="Profile of Justin Louckx"
+                className="mainImageM"
+              />
+            </div>
+            <div className="linksM">
+              <div className="topLinkM">
+                <a className="iconM" href="#courses">
+                  <School className="iconsM" />
+                  <span>Courses</span>
+                </a>
+                <a className="iconM" href="#projects">
+                  <Laptop className="iconsM" />
+                  <span>Projects</span>
+                </a>
+              </div>
+
+              <div className="bottomLinkM">
+                <a className="iconM" href="#references">
+                  <People className="iconsM" />
+                  <span>References</span>
+                </a>
+                <a className="iconM" href="#contact">
+                  <ContactMail className="iconsM" />
+                  <span>Contact</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </Mobile>
         <div class="main">
           <div class="circle">
             <a href="#projects">

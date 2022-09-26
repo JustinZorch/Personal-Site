@@ -7,15 +7,8 @@ import {
   mlCourses,
   allCourses,
 } from "../../data";
-import {
-  Bounce,
-  Slide,
-  Fade,
-  Flip,
-  Hinge,
-  Roll,
-  Zoom,
-} from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
+import { useMediaQuery } from "react-responsive";
 
 export default function Courses() {
   const [selected, setSelected] = useState("all");
@@ -28,6 +21,16 @@ export default function Courses() {
     { id: "frontend", title: "Frontend" },
     { id: "ml", title: "ML" },
   ];
+
+  const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 767 });
+    return isMobile ? children : null;
+  };
+
+  const Desktop = ({ children }) => {
+    const isDesktop = useMediaQuery({ minWidth: 768 });
+    return isDesktop ? children : null;
+  };
 
   useEffect(() => {
     switch (selected) {
@@ -51,29 +54,56 @@ export default function Courses() {
   return (
     <div className="courses" id="courses">
       <h1>Courses</h1>
-      <ul>
-        {list.map((item, index) => (
-          <CoursesList
-            key={index}
-            id={item.id}
-            title={item.title}
-            active={selected === item.id}
-            setSelected={setSelected}
-          />
-        ))}
-      </ul>
-      <div className="container">
-        {data.map((item, index) => (
-          <Zoom delay={index * 300} key={selected + "::" + item.url}>
-            <div className="item">
-              <img src={item.img} alt={item.title} id={index}></img>
-              <a href={item.url} target="_blank">
-                <h3>{item.title}</h3>
-              </a>
-            </div>
-          </Zoom>
-        ))}
-      </div>
+      <Mobile>
+        <div className="containerM">
+          {data.map((item, index) => (
+            <Zoom delay={index * 300} key={selected + "::" + item.url}>
+              <div className="itemM">
+                <img src={item.img} alt={item.title} id={index}></img>
+                <a className="linkM" href={item.url} target="_blank">
+                  <h3>{item.title}</h3>
+                </a>
+              </div>
+            </Zoom>
+          ))}
+        </div>
+        <ul className="selectionM">
+          {list.map((item, index) => (
+            <CoursesList
+              key={index}
+              id={item.id}
+              title={item.title}
+              active={selected === item.id}
+              setSelected={setSelected}
+            />
+          ))}
+        </ul>
+      </Mobile>
+      <Desktop>
+        <ul>
+          {list.map((item, index) => (
+            <CoursesList
+              key={index}
+              id={item.id}
+              title={item.title}
+              active={selected === item.id}
+              setSelected={setSelected}
+            />
+          ))}
+        </ul>
+        <div className="container">
+          {data.map((item, index) => (
+            <Zoom delay={index * 300} key={selected + "::" + item.url}>
+              <div className="item">
+                <img src={item.img} alt={item.title} id={index}></img>
+                <a href={item.url} target="_blank">
+                  <h3>{item.title}</h3>
+                </a>
+              </div>
+            </Zoom>
+          ))}
+        </div>
+      </Desktop>
     </div>
   );
 }
