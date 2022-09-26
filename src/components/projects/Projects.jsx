@@ -36,7 +36,30 @@ export default function Projects() {
 
   return (
     <div className="projectsContainer" id="projects">
-      <Mobile></Mobile>
+      <Mobile>
+        <h1 style={{ color: "white" }}>Projects</h1>
+        <div className="projectsM">
+          {data.map((item) => (
+            <div className="containerM">
+              <div className="leftM">
+                <a href={item.github} target="_blank" className="githubM">
+                  <GitHub className="icon" />
+                </a>
+                <a href={item.live} target="_blank" className="liveM">
+                  <Laptop className="icon" />
+                </a>
+                <div className="gifM" onClick={() => setGif(true)}>
+                  <GifBox className="icon" />
+                </div>
+              </div>
+              <div className="rightM">
+                <img className="mainImageM" src={item.source} alt="" />
+                <h2>{item.name}</h2>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Mobile>
       <Desktop>
         <h1>Projects</h1>
         <div
