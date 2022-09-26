@@ -1,8 +1,19 @@
 import "./references.scss";
 import { LinkedIn, AssuredWorkload } from "@mui/icons-material";
 import { references } from "../../data";
+import { useMediaQuery } from "react-responsive";
 
 export default function References() {
+  const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 767 });
+    return isMobile ? children : null;
+  };
+
+  const Desktop = ({ children }) => {
+    const isDesktop = useMediaQuery({ minWidth: 768 });
+    return isDesktop ? children : null;
+  };
+
   const data = references;
   return (
     <div className="references" id="references">

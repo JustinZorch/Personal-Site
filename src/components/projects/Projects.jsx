@@ -14,12 +14,14 @@ import { useMediaQuery } from "react-responsive";
 export default function Projects() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [gif, setGif] = useState(false);
+
   const [gifSourceM, setGifSourceM] = useState({
     gif: "",
     name: "",
     description: "",
     features: [],
   });
+
   const data = projects;
 
   const Mobile = ({ children }) => {
@@ -34,7 +36,7 @@ export default function Projects() {
 
   const handleClick = (direction) => {
     let dataLength = data.length - 1;
-    console.log(dataLength, data);
+
     direction === "left"
       ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : dataLength)
       : setCurrentSlide(currentSlide < dataLength ? currentSlide + 1 : 0);
@@ -45,8 +47,8 @@ export default function Projects() {
       <Mobile>
         {!gif ? (
           <>
-            <h1 style={{ color: "white" }}>Projects</h1>
             <div className="projectsM">
+              <h1 className="headingM">Projects</h1>
               {data.map((item) => (
                 <div className="containerM">
                   <div className="leftM">
