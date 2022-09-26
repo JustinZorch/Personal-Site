@@ -62,7 +62,7 @@
 
           padding: 10px 30px;
           span {
-            font-size: 20px;
+            font-size: 15px;
           }
 
           .iconsM {
@@ -202,7 +202,8 @@
     @include mobile {
       flex: 0.25;
       width: 100vw;
-      margin-bottom: 50px;
+      position: absolute;
+      bottom: 8vh;
       align-items: center;
       display: flex;
       flex-direction: column;
@@ -231,6 +232,9 @@
       }
       h2 {
         font-size: 35px;
+        @include mobile {
+          font-size: 25px;
+        }
       }
       h3 {
         font-size: 30px;
@@ -269,6 +273,9 @@
       }
 
       .arrowDownward {
+        @include mobile {
+          display: none;
+        }
         color: black;
         font-size: 100px;
         animation: arrowBlink 3s infinite;
