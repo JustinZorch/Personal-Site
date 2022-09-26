@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: all 1s ease;
 
   .projectsM {
     display: flex;
@@ -138,6 +137,9 @@
     font-size: 40px;
     color: white;
     position: absolute;
+    @include mobile {
+      display: none;
+    }
   }
 
   .arrow {
@@ -166,6 +168,10 @@
     position: absolute;
     left: 0;
     transition: all 1s ease-out;
+
+    @include mobile {
+      display: none;
+    }
 
     .gifContainer {
       padding: 40px;
