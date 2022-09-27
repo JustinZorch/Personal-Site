@@ -52,7 +52,11 @@ export default function References() {
                   }
                 >
                   <img src={item.img} alt="" />
-                  <h2>{item.name}...</h2>
+                  <div className="detailsM">
+                    <h3>{item.name}</h3>
+                    <h4>{item.title}</h4>
+                    <h4>...</h4>
+                  </div>
                 </div>
               ))}
             </div>
@@ -66,13 +70,13 @@ export default function References() {
                 {fullscreen.id !== 3 ? (
                   <>
                     <a href={fullscreen.linkedin} target="_blank">
-                      <LinkedIn className="icon" />
+                      <LinkedIn className="iconM" />
                     </a>
                   </>
                 ) : (
                   <>
                     <a href={fullscreen.linkedin} target="_blank">
-                      <AssuredWorkload className="icon" />
+                      <AssuredWorkload className="iconM" />
                     </a>
                   </>
                 )}
@@ -84,11 +88,11 @@ export default function References() {
                 <h4>{fullscreen.title}</h4>
                 <h4>{fullscreen.companyName}</h4>
               </div>
+              <Close
+                className="iconMFS"
+                onClick={() => setFullscreen({ clicked: false })}
+              />
             </div>
-            <Close
-              className="iconMFS"
-              onClick={() => setFullscreen({ clicked: false })}
-            />
           </>
         )}
       </Mobile>
