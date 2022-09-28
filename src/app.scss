@@ -2,6 +2,7 @@
 
 .app {
   height: 100vh;
+  overflow-x: hidden;
 
   .seeCV {
     display: flex;
@@ -30,11 +31,15 @@
   .sections {
     width: 100%;
     height: calc(100vh - 70px);
-    background-color: lightsalmon;
+    background-color: white;
     position: relative;
     top: 70px;
-    scroll-behavior: smooth;
+
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    /* Reserve space for header plus some extra space for sneak peeking. */
+
+    overflow-y: scroll;
     scrollbar-width: none; // for firefox
     &::-webkit-scrollbar {
       display: none; //chrome, safari

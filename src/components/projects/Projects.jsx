@@ -11,10 +11,11 @@ import {
 import { projects } from "../../data";
 import { useMediaQuery } from "react-responsive";
 
+import ProjectsSlider from "./ProjectSlider";
+
 export default function Projects() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [gif, setGif] = useState(false);
-
   const [gifSourceM, setGifSourceM] = useState({
     gif: "",
     name: "",
@@ -45,62 +46,12 @@ export default function Projects() {
   return (
     <div className="projectsContainer" id="projects">
       <Mobile>
-        {!gif ? (
-          <>
-            <div className="projectsM">
-              <h1 className="headingM">Projects</h1>
-              {data.map((item) => (
-                <div className="containerM">
-                  <div className="leftM">
-                    <a href={item.github} target="_blank" className="githubM">
-                      <GitHub className="icon" />
-                    </a>
-                    <a href={item.live} target="_blank" className="liveM">
-                      <Laptop className="icon" />
-                    </a>
-                    <div
-                      className="gifM"
-                      onClick={() => {
-                        setGifSourceM({
-                          gif: item.gif,
-                          name: item.name,
-                          description: item.description,
-                          features: item.features,
-                        });
-                        setGif(true);
-                      }}
-                    >
-                      <GifBox className="icon" />
-                    </div>
-                  </div>
-                  <div className="rightM">
-                    <img className="mainImageM" src={item.source} alt="" />
-                    <h2>{item.name}</h2>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="gifContainerM" onClick={() => setGif(false)}>
-              <h2>{gifSourceM.name} Site Demo</h2>
-              <img src={gifSourceM.gif} className="gifImageM" alt="" />
-              <div className="detailsM">
-                <p>{gifSourceM.description}</p>
-              </div>
-              <div className="featuresContainerM">
-                <span>Features:</span>
-                <ul className="featuresM">
-                  {gifSourceM.features.map((feature) => (
-                    <li>{feature}</li>
-                  ))}
-                </ul>
-              </div>
-              <Close className="iconM" />
-            </div>
-          </>
-        )}
+        <ProjectsSlider
+          gif={gif}
+          setGif={setGif}
+          gifSourceM={gifSourceM}
+          setGifSourceM={setGifSourceM}
+        />
       </Mobile>
 
       <h1>Projects</h1>
@@ -134,7 +85,6 @@ export default function Projects() {
 
                     <div className="stacksContainer">
                       {item.stack.map((item) => (
-                        // console.log(item)
                         <div className="stacks">
                           <img
                             className="stacksImg"

@@ -5,6 +5,7 @@ import Courses from "./components/courses/Courses";
 import Projects from "./components/projects/Projects";
 import References from "./components/references/References";
 import Contact from "./components/contact/Contact";
+import Test from "./components/sliderTest/Test";
 import "./app.scss";
 import { useState } from "react";
 import { Close } from "@mui/icons-material";
@@ -31,6 +32,7 @@ function App() {
         <>
           <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} setCv={setCv} />
           <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+
           <div className="sections">
             <Intro />
             <Courses />
