@@ -35,9 +35,8 @@
     position: relative;
     top: 70px;
 
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     scroll-behavior: smooth;
-    /* Reserve space for header plus some extra space for sneak peeking. */
 
     overflow-y: scroll;
     scrollbar-width: none; // for firefox

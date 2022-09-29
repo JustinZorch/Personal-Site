@@ -1,9 +1,5 @@
 @import "../../global.scss";
 
-.headingM {
-  color: black;
-  margin-bottom: 15vh;
-}
 .sliderProjects {
   width: 100%;
   height: 100%;
@@ -12,9 +8,9 @@
   justify-content: center;
 
   .projectsSlider {
-    margin-bottom: 10vh;
+    margin-bottom: 20vh;
     width: 70%;
-    height: 80%;
+    height: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,6 +30,7 @@
 
       h3 {
         color: white;
+        font-weight: 300;
       }
 
       .images {
@@ -49,37 +46,32 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
         justify-content: space-around;
         border-radius: 10px;
-        padding: 10px;
-        height: 30vh;
-        width: 75%;
+        padding: 20px;
+        height: 25vh;
+        width: 65%;
         border: 1px solid lightgray;
         box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
           rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
           rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
         background-color: white;
 
-        h4 {
-          text-align: center;
-        }
-
         p {
           text-align: center;
         }
-      }
 
-      .linksM {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
+        .linksM {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-evenly;
 
-        .iconM {
-          color: black;
-          font-size: 35px;
-          padding: 0 20px 0 20px;
+          .iconM {
+            color: black;
+            font-size: 35px;
+            padding: 0 10px 0 10px;
+          }
         }
       }
     }
@@ -103,5 +95,63 @@
     .swiperSlide:nth-child(5n) {
       background-color: teal;
     }
+  }
+}
+
+//gif mobile container styling
+
+.gifContainerM {
+  height: 70%;
+  width: 95%;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+  .headingGifM {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .gifImageM {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+
+  .detailsM {
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .featuresContainerM {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 20px;
+      margin: 10px 0 10px 0;
+    }
+  }
+
+  .iconM {
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border-radius: 50%;
   }
 }

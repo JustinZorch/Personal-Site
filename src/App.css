@@ -8,9 +8,8 @@
   background-color: lightsalmon;
   position: relative;
   top: 70px;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
   scrollbar-width: none;
 }
 
@@ -23,4 +22,3 @@
   height: calc(100vh - 70px);
   scroll-snap-align: start;
 }
-/*# sourceMappingURL=app.css.map */

@@ -6,13 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/effect-cards";
-import {
-  GitHub,
-  Laptop,
-  GifBox,
-  Close,
-  ConstructionOutlined,
-} from "@mui/icons-material";
+import { GitHub, Laptop, GifBox, Close } from "@mui/icons-material";
 import { projects } from "../../data";
 
 function ProjectsSlider(props) {
@@ -21,7 +15,6 @@ function ProjectsSlider(props) {
     <>
       {!props.gif ? (
         <>
-          <h1 className="headingM">Projects</h1>
           <div className="sliderProjects">
             <Swiper
               effect={"cards"}
@@ -44,12 +37,6 @@ function ProjectsSlider(props) {
                   ></img>
                   <div className="detailsM">
                     <p>{item.description}</p>
-                    <h4>Features</h4>
-                    <ul className="features">
-                      {item.features.map((feature) => (
-                        <li>{feature}</li>
-                      ))}
-                    </ul>
                     <div className="linksM">
                       <a href={item.github} target="_blank">
                         <GitHub className="iconM" />
@@ -82,7 +69,7 @@ function ProjectsSlider(props) {
       ) : (
         <>
           <div className="gifContainerM" onClick={() => props.setGif(false)}>
-            <h2>{props.gifSourceM.name} Site Demo</h2>
+            <h2 className="headingGifM">{props.gifSourceM.name} Site Demo</h2>
             <img src={props.gifSourceM.gif} className="gifImageM" alt="" />
             <div className="detailsM">
               <p>{props.gifSourceM.description}</p>
@@ -104,58 +91,3 @@ function ProjectsSlider(props) {
 }
 
 export default ProjectsSlider;
-
-/* <div className="projectsM">
-              <h1 className="headingM">Projects</h1>
-              {data.map((item) => (
-                <div className="containerM">
-                  <div className="leftM">
-                    <a href={item.github} target="_blank" className="githubM">
-                      <GitHub className="icon" />
-                    </a>
-                    <a href={item.live} target="_blank" className="liveM">
-                      <Laptop className="icon" />
-                    </a>
-                    <div
-                      className="gifM"
-                      onClick={() => {
-                        setGifSourceM({
-                          gif: item.gif,
-                          name: item.name,
-                          description: item.description,
-                          features: item.features,
-                        });
-                        setGif(true);
-                      }}
-                    >
-                      <GifBox className="icon" />
-                    </div>
-                  </div>
-                  <div className="rightM">
-                    <img className="mainImageM" src={item.source} alt="" />
-                    <h2>{item.name}</h2>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="gifContainerM" onClick={() => setGif(false)}>
-              <h2>{gifSourceM.name} Site Demo</h2>
-              <img src={gifSourceM.gif} className="gifImageM" alt="" />
-              <div className="detailsM">
-                <p>{gifSourceM.description}</p>
-              </div>
-              <div className="featuresContainerM">
-                <span>Features:</span>
-                <ul className="featuresM">
-                  {gifSourceM.features.map((feature) => (
-                    <li>{feature}</li>
-                  ))}
-                </ul>
-              </div>
-              <Close className="iconM" />
-            </div>
-          </>
-        )} */

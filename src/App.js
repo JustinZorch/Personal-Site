@@ -5,7 +5,7 @@ import Courses from "./components/courses/Courses";
 import Projects from "./components/projects/Projects";
 import References from "./components/references/References";
 import Contact from "./components/contact/Contact";
-import Test from "./components/sliderTest/Test";
+
 import "./app.scss";
 import { useState } from "react";
 import { Close } from "@mui/icons-material";

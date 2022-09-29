@@ -45,6 +45,7 @@ export default function Projects() {
 
   return (
     <div className="projectsContainer" id="projects">
+      <h1>Projects</h1>
       <Mobile>
         <ProjectsSlider
           gif={gif}
@@ -54,7 +55,6 @@ export default function Projects() {
         />
       </Mobile>
 
-      <h1>Projects</h1>
       <div
         className="slider"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}

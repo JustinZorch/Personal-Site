@@ -6,6 +6,7 @@
 
   @include mobile {
     flex-direction: column;
+    align-items: center;
   }
 
   .left {
@@ -16,8 +17,8 @@
     overflow: hidden;
     position: relative;
     @include mobile {
-      flex: 0.3;
-      position: static;
+      display: none;
+      flex: 0;
     }
 
     .message {
@@ -28,32 +29,15 @@
       position: absolute;
       width: 300px;
       height: 250px;
-
-      @include mobile {
-        background-color: #0066e217;
-        width: 75%;
-        height: 55%;
-        padding: 20px;
-        border-radius: 20px;
-        transform: rotate(0deg);
-        margin-top: 20px;
-        position: static;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-          rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-          rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-      }
     }
 
     img {
       height: 75%;
       position: absolute;
 
-      @include mobile {
-        display: none;
+      &:hover {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
       }
     }
   }
@@ -66,11 +50,26 @@
     justify-content: center;
 
     @include mobile {
-      width: 100%;
+      padding-top: 10px;
+      justify-content: flex-start;
+      height: 70%;
+      width: 80%;
+      border: 1px solid lightgray;
+      box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+        rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+        rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+      border-radius: 10px;
+      flex: none;
+      margin-top: 30px;
     }
 
     h2 {
-      font-size: 30px;
+      font-size: 40px;
+      font-weight: 400;
+
+      @include mobile {
+        font-size: 25px;
+      }
     }
 
     .thanks {
@@ -85,8 +84,16 @@
         rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
         rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 
+      span {
+        font-size: 30px;
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+
       @include mobile {
-        width: 80vw;
+        margin: auto;
+        width: 70vw;
         text-align: center;
       }
 
@@ -134,10 +141,6 @@
           transform: translate(1px, -2px) rotate(-1deg);
         }
       }
-
-      span {
-        font-size: 30px;
-      }
     }
 
     form {
@@ -156,6 +159,7 @@
         padding: 0 10px;
         @include mobile {
           width: 90%;
+          margin: 10px 0 10px 0;
         }
       }
 
@@ -163,10 +167,12 @@
         width: 300px;
         height: 200px;
         font-size: 14px;
-        padding: 0 10px;
+        padding: 10px;
 
         @include mobile {
           width: 90%;
+          height: 250px;
+          margin-top: 10px;
         }
       }
 
@@ -179,6 +185,10 @@
         border-radius: 10px;
         font-weight: 500;
         cursor: pointer;
+
+        @include mobile {
+          margin-top: 20px;
+        }
 
         &:focus {
           outline: none;

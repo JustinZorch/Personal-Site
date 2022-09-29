@@ -8,21 +8,22 @@
   width: 100%;
 
   h1 {
-    font-size: 50px;
+    font-size: 40px;
+    font-weight: 400;
     @include mobile {
       display: none;
     }
   }
 
   .headingM {
-    margin-top: 10px;
     display: block;
-    font-size: 20px;
+    font-size: 25px;
+    margin: 10px 0 10px 0;
   }
 
   .containerM {
     width: 95%;
-    margin-top: 10px;
+
     display: flex;
     flex-direction: column;
     align-items: center;

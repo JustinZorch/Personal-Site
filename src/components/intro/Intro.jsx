@@ -10,6 +10,7 @@ import {
 import { init } from "ityped";
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import Info from "./Info.jsx";
 
 export default function Intro() {
   const textRef = useRef();
