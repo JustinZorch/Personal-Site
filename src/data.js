@@ -92,10 +92,10 @@ export const projects = [
   {
     id: 2,
     name: "JLVL",
-    live: "",
-    github: "",
+    live: "https://jlvl.vercel.app/",
+    github: "https://github.com/JustinZorch/Personal-Site",
     source: "assets/projects/jlvl.JPG",
-    gif: "",
+    gif: "assets/Project Gifs/jlvl.gif",
     description: "Personal Software Engineering website.",
     features: [
       "Dynamic reactive styling",

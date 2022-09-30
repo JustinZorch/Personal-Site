@@ -47,12 +47,7 @@ export default function Projects() {
     <div className="projectsContainer" id="projects">
       <h1>Projects</h1>
       <Mobile>
-        <ProjectsSlider
-          gif={gif}
-          setGif={setGif}
-          gifSourceM={gifSourceM}
-          setGifSourceM={setGifSourceM}
-        />
+        <ProjectsSlider />
       </Mobile>
 
       <div
@@ -114,7 +109,12 @@ export default function Projects() {
             ) : (
               <>
                 <div className="gifContainer" onClick={() => setGif(false)}>
-                  <img src={item.gif} className="gifImage" alt="" />
+                  <img
+                    src={item.gif}
+                    loading="lazy"
+                    className="gifImage"
+                    alt=""
+                  />
                   <Close className="icon" />
                   <span>{item.name} Site Demo</span>
                 </div>

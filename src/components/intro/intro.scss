@@ -15,7 +15,7 @@
     overflow: hidden;
 
     @include mobile {
-      flex: 0.7;
+      flex: 0.65;
     }
 
     .topM {
@@ -26,24 +26,26 @@
 
       .imgContainerM {
         background-color: $maincolor;
-        width: 40vh;
-        height: 40vh;
+        width: 35vh;
+        height: 35vh;
         border-radius: 50%;
         overflow: hidden;
         margin: 10px 20px auto;
       }
 
       img {
-        height: 40vh;
-        margin-top: 2px;
-        margin-left: 40px;
+        height: 35vh;
+
+        margin-left: 30px;
         overflow: hidden;
       }
 
       .linksM {
-        margin-top: 20px;
         height: 20vh;
         overflow: hidden;
+        @include mobile {
+          overflow: visible;
+        }
       }
 
       .topLinkM,
@@ -55,7 +57,7 @@
 
         .iconM {
           display: flex;
-          width: 100px;
+          width: 25vw;
           flex-direction: column;
           align-items: center;
           color: black;
@@ -67,7 +69,7 @@
           }
 
           .iconsM {
-            font-size: 30px;
+            font-size: 4vh;
           }
         }
       }
@@ -202,10 +204,9 @@
     flex: 0.35;
     overflow: hidden;
     @include mobile {
-      flex: 0.3;
+      flex: 0.2;
       width: 100vw;
-      position: absolute;
-      bottom: 9vh;
+
       align-items: center;
       display: flex;
       flex-direction: column;

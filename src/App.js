@@ -25,6 +25,7 @@ function App() {
               src="assets/Justin Louckx - Resume.pdf"
               width="80%"
               height="100%"
+              loading="lazy"
             />
           </div>
         </>
