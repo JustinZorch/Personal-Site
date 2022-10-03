@@ -34,7 +34,7 @@ function App() {
           <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} setCv={setCv} />
           <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-          <div className="sections">
+          <div className="sections" onClick={() => setMenuOpen(false)}>
             <Intro />
             <Courses />
             <Projects />
